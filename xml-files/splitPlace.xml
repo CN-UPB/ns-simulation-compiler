@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net gridActive="true" id="0" netclass="SCPN" sharpEdges="false"
+  xmlns="http://pdv.cs.tu-berlin.de/TimeNET/schema/SCPN"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pdv.cs.tu-berlin.de/TimeNET/schema/SCPN etc/schemas/SCPN.xsd">
+  <place capacity="0" id="0.1" initialMarking="" queue="FIFO"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="280" y="430"/>
+    <label id="0.1.0" text="P0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.7" initialMarking="" queue="Random"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="510" y="370"/>
+    <label id="0.7.0" text="P1" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.8" initialMarking="" queue="Random"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="510" y="490"/>
+    <label id="0.8.0" text="P2" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <timedTransition id="0.0" serverType="ExclusiveServer"
+    specType="Automatic" takeFirst="false" timeFunction="1" type="node" watch="false">
+    <graphics orientation="0" x="190" y="430"/>
+    <label id="0.0.0" text="T0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <immediateTransition id="0.3" priority="1"
+    serverType="ExclusiveServer" specType="Automatic" takeFirst="false"
+    type="node" watch="false" weight="7">
+    <graphics orientation="0" x="390" y="370"/>
+    <label id="0.3.0" text="T1" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </immediateTransition>
+  <immediateTransition id="0.4" priority="1"
+    serverType="ExclusiveServer" specType="Automatic" takeFirst="false"
+    type="node" watch="false" weight="3">
+    <graphics orientation="0" x="390" y="490"/>
+    <label id="0.4.0" text="T2" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </immediateTransition>
+  <arc fromNode="0.0" id="0.2" toNode="0.1" type="connector">
+    <inscription id="0.2.0" text="new({size=1.0})" type="inscriptionText">
+      <graphics x="-45" y="20"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.1" id="0.5" toNode="0.3" type="connector">
+    <inscription id="0.5.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.1" id="0.6" toNode="0.4" type="connector">
+    <inscription id="0.6.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.3" id="0.9" toNode="0.7" type="connector">
+    <inscription id="0.9.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.4" id="0.10" toNode="0.8" type="connector">
+    <inscription id="0.10.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <measure eval="TimeAverage" expression="#P1" id="0.11" name="p1"
+    result="30.98099" type="text" watch="true">
+    <graphics x="560" y="360"/>
+  </measure>
+  <measure eval="TimeAverage" expression="#P2" id="0.12" name="p2"
+    result="13.22659" type="text" watch="true">
+    <graphics x="560" y="490"/>
+  </measure>
+  <recordTokentype id="0.13" name="Request" type="text">
+    <graphics x="60" y="40"/>
+    <attribute dataType="real" name="size"/>
+  </recordTokentype>
+</net>

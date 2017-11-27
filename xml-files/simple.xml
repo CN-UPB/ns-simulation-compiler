@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net gridActive="true" id="0" netclass="SCPN" sharpEdges="false"
+  xmlns="http://pdv.cs.tu-berlin.de/TimeNET/schema/SCPN"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pdv.cs.tu-berlin.de/TimeNET/schema/SCPN etc/schemas/SCPN.xsd">
+  <place capacity="0" id="0.1" initialMarking="" queue="Random"
+    tokentype="request" type="node" watch="true">
+    <graphics orientation="0" x="150" y="270"/>
+    <label id="0.1.0" text="P0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.3" initialMarking="" queue="Random"
+    tokentype="request" type="node" watch="true">
+    <graphics orientation="0" x="370" y="270"/>
+    <label id="0.3.0" text="P1" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <timedTransition id="0.0" logfileExpression="&quot;NOW,TAB,size&quot;"
+    serverType="ExclusiveServer" specType="Automatic" takeFirst="false"
+    timeFunction="1.0" type="node" watch="true">
+    <graphics orientation="0" x="50" y="270"/>
+    <label id="0.0.0" text="T0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <timedTransition displayExpression="" id="0.2"
+    logfileExpression="x.size" logfileName="halloTest.log"
+    serverType="ExclusiveServer" specType="Automatic" takeFirst="false"
+    timeFunction="EXP(1.0)" type="node" watch="true">
+    <graphics orientation="0" x="260" y="270"/>
+    <label id="0.2.0" text="T1" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <arc fromNode="0.0" id="0.4" toNode="0.1" type="connector">
+    <inscription id="0.4.0" text="new({size=1.0})" type="inscriptionText">
+      <graphics x="-50" y="20"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.1" id="0.5" toNode="0.2" type="connector">
+    <inscription id="0.5.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.2" id="0.6" toNode="0.3" type="connector">
+    <inscription id="0.6.0" text="new({size=x.size*2})" type="inscriptionText">
+      <graphics x="-55" y="30"/>
+    </inscription>
+  </arc>
+  <measure eval="Cumulative" expression="#P1" id="0.7" name="totalP1"
+    result="" type="text" watch="true">
+    <graphics x="170" y="20"/>
+  </measure>
+  <recordTokentype id="0.12" name="request" type="text">
+    <graphics x="60" y="30"/>
+    <attribute dataType="real" name="size"/>
+  </recordTokentype>
+</net>

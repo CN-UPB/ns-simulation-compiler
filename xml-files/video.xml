@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net gridActive="true" id="0" netclass="SCPN" sharpEdges="false"
+  xmlns="http://pdv.cs.tu-berlin.de/TimeNET/schema/SCPN"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pdv.cs.tu-berlin.de/TimeNET/schema/SCPN etc/schemas/SCPN.xsd">
+  <place capacity="0" id="0.0" initialMarking="" queue="FIFO"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="220" y="340"/>
+    <label id="0.0.0" text="C_P0" type="text">
+      <graphics x="-20" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.5" initialMarking="" queue="FIFO"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="650" y="370"/>
+    <label id="0.5.0" text="S_P0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.6" initialMarking="" queue="FIFO"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="690" y="490"/>
+    <label id="0.6.0" text="V_P0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.7" initialMarking="" queue="FIFO"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="690" y="570"/>
+    <label id="0.7.0" text="A_P0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.8" initialMarking="" queue="FIFO"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="300" y="490"/>
+    <label id="0.8.0" text="C_P2" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.9" initialMarking="" queue="FIFO"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="300" y="570"/>
+    <label id="0.9.0" text="C_P3" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.12" initialMarking="" queue="Random"
+    tokentype="Request" type="node" watch="true">
+    <graphics orientation="0" x="60" y="390"/>
+    <label id="0.12.0" text="U_P0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <place capacity="0" id="0.3" initialMarking="" queue="Random"
+    tokentype="Request" type="node" watch="false">
+    <graphics orientation="0" x="340" y="340"/>
+    <label id="0.3.0" text="C_P1" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </place>
+  <timedTransition id="0.14" serverType="ExclusiveServer"
+    specType="Automatic" takeFirst="false" timeFunction="EXP(0.5)"
+    type="node" watch="false">
+    <graphics orientation="0" x="220" y="520"/>
+    <label id="0.14.0" text="C_T3" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <timedTransition id="0.16" serverType="ExclusiveServer"
+    specType="Automatic" takeFirst="false" timeFunction="EXP(0.5)"
+    type="node" watch="false">
+    <graphics orientation="0" x="710" y="370"/>
+    <label id="0.16.0" text="S_T0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <timedTransition id="0.17" serverType="ExclusiveServer"
+    specType="Automatic" takeFirst="false" timeFunction="EXP(0.5)"
+    type="node" watch="false">
+    <graphics orientation="0" x="630" y="490"/>
+    <label id="0.17.0" text="V_T0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <timedTransition id="0.18" serverType="ExclusiveServer"
+    specType="Automatic" takeFirst="false" timeFunction="EXP(0.5)"
+    type="node" watch="false">
+    <graphics orientation="0" x="630" y="570"/>
+    <label id="0.18.0" text="A_T0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <timedTransition id="0.2"
+    logfileDescription="&quot;Time&quot;Size&quot;"
+    logfileExpression="&quot;NOW,TAB,x.size&quot;"
+    logfileName="C_T0.log" serverType="ExclusiveServer"
+    specType="Automatic" takeFirst="false" timeFunction="EXP(0.5)"
+    type="node" watch="false">
+    <graphics orientation="0" x="280" y="340"/>
+    <label id="0.2.0" text="C_T0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <timedTransition id="0.39" serverType="ExclusiveServer"
+    specType="Automatic" takeFirst="false" timeFunction="EXP(1.0)"
+    type="node" watch="true">
+    <graphics orientation="0" x="110" y="380"/>
+    <label id="0.39.0" text="U_T0" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </timedTransition>
+  <immediateTransition id="0.4" priority="1"
+    serverType="ExclusiveServer" specType="Automatic" takeFirst="false"
+    type="node" watch="false" weight="0.7">
+    <graphics orientation="0" x="430" y="270"/>
+    <label id="0.4.0" text="C_T1" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </immediateTransition>
+  <immediateTransition id="0.10" priority="1"
+    serverType="ExclusiveServer" specType="Automatic" takeFirst="false"
+    type="node" watch="false" weight="0.3">
+    <graphics orientation="0" x="430" y="370"/>
+    <label id="0.10.0" text="C_T2" type="text">
+      <graphics x="-10" y="-40"/>
+    </label>
+  </immediateTransition>
+  <arc fromNode="0.5" id="0.22" toNode="0.16" type="connector">
+    <inscription id="0.22.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.16" id="0.23" toNode="0.6" type="connector">
+    <inscription id="0.23.0" text="new({size=x.size*10})" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+    <handle id="0.23.1">
+      <graphics orientation="0" x="740" y="440"/>
+    </handle>
+  </arc>
+  <arc fromNode="0.16" id="0.24" toNode="0.7" type="connector">
+    <inscription id="0.24.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+    <handle id="0.24.1">
+      <graphics orientation="0" x="800" y="470"/>
+    </handle>
+  </arc>
+  <arc fromNode="0.7" id="0.25" toNode="0.18" type="connector">
+    <inscription id="0.25.0" text="ad" type="inscriptionText">
+      <graphics x="-10" y="10"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.6" id="0.26" toNode="0.17" type="connector">
+    <inscription id="0.26.0" text="vid" type="inscriptionText">
+      <graphics x="-10" y="10"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.17" id="0.27" toNode="0.8" type="connector">
+    <inscription id="0.27.0" text="new({size=vid.size*0.5})" type="inscriptionText">
+      <graphics x="-55" y="10"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.18" id="0.28" toNode="0.9" type="connector">
+    <inscription id="0.28.0" text="ad" type="inscriptionText">
+      <graphics x="-5" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.9" id="0.29" toNode="0.14" type="connector">
+    <inscription id="0.29.0" text="ad" type="inscriptionText">
+      <graphics x="-10" y="5"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.8" id="0.30" toNode="0.14" type="connector">
+    <inscription id="0.30.0" text="vid" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.14" id="0.31" toNode="0.12" type="connector">
+    <inscription id="0.31.0" text="new({size=vid.size+ad.size})" type="inscriptionText">
+      <graphics x="-110" y="45"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.0" id="0.11" toNode="0.2" type="connector">
+    <inscription id="0.11.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.2" id="0.13" toNode="0.3" type="connector">
+    <inscription id="0.13.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.3" id="0.20" toNode="0.4" type="connector">
+    <inscription id="0.20.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.3" id="0.21" toNode="0.10" type="connector">
+    <inscription id="0.21.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.10" id="0.35" toNode="0.5" type="connector">
+    <inscription id="0.35.0" text="x" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <arc fromNode="0.4" id="0.36" toNode="0.12" type="connector">
+    <inscription id="0.36.0" text="new({size=x.size*6})" type="inscriptionText">
+      <graphics x="-10" y="-20"/>
+    </inscription>
+    <handle id="0.36.1">
+      <graphics orientation="0" x="140" y="280"/>
+    </handle>
+  </arc>
+  <arc fromNode="0.39" id="0.40" toNode="0.0" type="connector">
+    <inscription id="0.40.0" text="new({size=1.0})" type="inscriptionText">
+      <graphics x="0" y="0"/>
+    </inscription>
+  </arc>
+  <measure eval="Cumulative" expression="#C_T1" id="0.37"
+    name="cache_hits" result="2.022667" type="text" watch="true">
+    <graphics x="910" y="160"/>
+  </measure>
+  <measure eval="Cumulative" expression="#C_T2" id="0.38"
+    name="cache_misses" result="0.883" type="text" watch="true">
+    <graphics x="910" y="190"/>
+  </measure>
+  <comment commentText="Users" id="0.32" type="text">
+    <graphics x="40" y="310"/>
+  </comment>
+  <comment commentText="Cache" id="0.33" type="text">
+    <graphics x="260" y="240"/>
+  </comment>
+  <comment commentText="Server" id="0.34" type="text">
+    <graphics x="670" y="290"/>
+  </comment>
+  <comment commentText="Video optimizer" id="0.15" type="text">
+    <graphics x="620" y="420"/>
+  </comment>
+  <comment commentText="Ad insertion" id="0.19" type="text">
+    <graphics x="620" y="610"/>
+  </comment>
+  <recordTokentype id="0.1" name="Request" type="text">
+    <graphics x="70" y="910"/>
+    <attribute dataType="real" name="size"/>
+  </recordTokentype>
+</net>
