@@ -27,7 +27,7 @@ To illustrate and test the compilation process, consider the following very simp
 
 ![example](example.png)
 
-To compile OMNeT++ simulation code for this network service, simply run `python main.py syncTrans.xml`. The resulting simulation code is in `autogen/SynctransAuto`.
+This network service is specified in `xml-files/syncTrans.xml`. To compile the corresponding OMNeT++ simulation code, simply run `python main.py syncTrans.xml`. The resulting simulation code is in `autogen/SynctransAuto`.
 
 ## Contact
 
