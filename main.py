@@ -1,8 +1,16 @@
 import xml.etree.ElementTree as ET
 from shutil import copyfile
-
 from petrinet import *
+import sys
 import os
+
+
+# get name of xml-file as command line argument and strip the .xml ending
+if len(sys.argv) < 2:
+	print("Please specify the xml file name of a network service specification inside the 'xml-files' folder (e.g., 'syncTrans.xml')")
+	exit(1)
+xml_name = sys.argv[1][:-4]			# cut off .xml file ending
+# xml_name = "syncTrans"
 
 
 # create a new folder for the auto-compiled Omnet++ files, copying the base-files from "omnet-base"
@@ -93,7 +101,6 @@ def write_ini():
 			ini.write(f'{name}.{it.name}.coeffs = "{it.coeffs()}"\n')
 
 
-xml_name = "video"						# name of xml-file (without suffix)
 name = xml_name.capitalize() + "Auto"
 places, timed_transitions, immediate_transitions, arcs = [], [], [], []
 
