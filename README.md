@@ -25,11 +25,11 @@ Here is the complete workflow of specification, compilation, and simulation:
 
 Specification with TimeNet:
 
-![timenet](docs/timenet.png)
+![timenet](docs/timenet.png =250px)
 
 Simulation with OMNeT++:
 
-![omnet](docs/omnet.png)
+![omnet](docs/omnet.png =250px)
 
 ## Example/Test
 
