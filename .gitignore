@@ -1,2 +1,11 @@
 .idea
 __pycache__
+*/.cproject
+*/.oppbuildspec
+*/.project
+*/.qtenvrc
+*/.settings/
+*/Makefile
+*/out/
+*/results/
+*/test.exe
