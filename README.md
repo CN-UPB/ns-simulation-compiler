@@ -21,6 +21,16 @@ Here is the complete workflow of specification, compilation, and simulation:
 3. The generated simulation code can be used directly by OMNeT++ 5.2, by selecting `File > New > OMNET++ Project` inside the OMNeT++ IDE. In the following setup wizard, simply choose a project name and select the generated folder inside `autogen` as location (don't use default!). You can then directly execute and run the `omnet.ini` inside OMNeT++.
    If you just want to test the simulation with OMNeT++, the `omnet-test` contains an already generated/compiled OMNeT++ simulation that you can use.
 
+### Screenshots
+
+Specification with TimeNet:
+
+![timenet](docs/timenet.png)
+
+Simulation with OMNeT++:
+
+![omnet](docs/omnet.png)
+
 ## Example/Test
 
 To illustrate and test the compilation process, consider the following very simple example network service (`syncTrans.xml` inside the `xml-files` folder): A single VNF receives requests from two sources. The VNF synchronizes and processes the requests before sending out the merged traffic to an end-point. This simplistic network service can be specified as Queuing Petri Nets as illustrated in the figure below.
