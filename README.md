@@ -25,14 +25,14 @@ Here is the complete workflow of specification, compilation, and simulation:
 
 To illustrate and test the compilation process, consider the following very simple example network service (`syncTrans.xml` inside the `xml-files` folder): A single VNF receives requests from two sources. The VNF synchronizes and processes the requests before sending out the merged traffic to an end-point. This simplistic network service can be specified as Queuing Petri Nets as illustrated in the figure below.
 
-![example](example.png)
+![example](docs/example.png)
 
 This network service is specified in `xml-files/syncTrans.xml`. To compile the corresponding OMNeT++ simulation code, simply run `python main.py syncTrans.xml`. The resulting simulation code is in `autogen/SynctransAuto`.
 
 ## Contact
 
-The source code belongs to the paper "Specifying and Analyzing Virtual Network Services Using Queuing Petri Nets" submitted to IEEE NetSoft 2018. The authors are Stefan Schneider, Arnab Sharma, Holger Karl, and  Heike Wehrheim.
+The source code belongs to the paper "Specifying and Analyzing Virtual Network Services Using Queuing Petri Nets" submitted to IFIP/IEEE International Symposium on Integrated Network Management (IM) 2019. The authors are Stefan Schneider, Arnab Sharma, Holger Karl, and  Heike Wehrheim.
 
-Lead developer: Stefan Schneider
+Lead developer: Stefan Schneider (@StefanUPB)
 
 For questions or support, please use GitHub's issue system.
