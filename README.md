@@ -20,6 +20,7 @@ Here is the complete workflow of specification, compilation, and simulation:
 2. Execute `main.py` and specify the name (not the path) of the network service's xml file as command line argument. This triggers the compilation process and creates a new subfolder inside the `autogen` folder with the generated simulation code. The simulation code contains the C++ module implementations, copied from `omnet-base` and generates individual OMNeT++ configuration files corresponding to the specified network service.
 3. The generated simulation code can be used directly by OMNeT++ 5.2, by selecting `File > New > OMNET++ Project` inside the OMNeT++ IDE. In the following setup wizard, simply choose a project name and select the generated folder inside `autogen` as location (don't use default!). You can then directly execute and run the `omnet.ini` inside OMNeT++.
    If you just want to test the simulation with OMNeT++, the `omnet-test` contains an already generated/compiled OMNeT++ simulation that you can use.
+4. Run the simulation and analyze the results. For example, you can [evaluate the impact of different service configurations on the end-to-end delay](eval/cache_hit_ratio.ipynb) or [investigate bottlenecks in the service](eval/max_rate.ipynb).
 
 ### Screenshots
 
@@ -27,7 +28,7 @@ Specification with TimeNet:
 
 <img src="docs/timenet.png" alt="timenet" width="600px"/>
 
-Simulation with OMNeT++:
+Simulation with OMNeT++ GUI (also possible from command line):
 
 <img src="docs/omnet.png" alt="omnet" width="600px"/>
 
