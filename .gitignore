@@ -9,3 +9,6 @@ __pycache__
 */out/
 */results/
 */test.exe
+*/.cmdenv-log
+
+eval/.ipynb_checkpoints
