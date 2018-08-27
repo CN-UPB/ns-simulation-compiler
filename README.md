@@ -10,6 +10,12 @@ This automated workflows enables fast and easy, yet accurate analysis of network
 * [OMNeT++ 5.2](https://omnetpp.org/) to execute the generated simulation code
 * [TimeNet 4.4](https://timenet.tu-ilmenau.de/template/index) to specify new network services as Queuing Petri Nets
 
+To install all requirements for running the evaluation Jupyter notebooks, use the `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Usage/Execution workflow
 
 For simulation compilation, simply run `python main.py <service.xml>`, where `<service.xml` is the specified network service as xml file.
