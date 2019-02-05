@@ -4,6 +4,14 @@ The compiler generates OMNeT++ simulation code for simulating and analyzing the 
 
 This automated workflows enables fast and easy, yet accurate analysis of network services, providing valuable insights into their behavior and performance.
 
+### Cite this work
+
+If you use this simulation compiler in your research, please cite our work:
+
+> Stefan Schneider, Sharma Arnab, Holger Karl, and Heike Wehrheim: "[Specifying and Analyzing Virtual Network Services Using Queuing Petri Nets](https://ris.uni-paderborn.de/record/3287)". IFIP/IEEE International Symposium on Integrated Network Management (IM 2019), Washington DC, USA (2019)
+
+*Note: For the source code originally implemented and submitted to IFIP/IEEE IM 2019, refer to the corresponding [release](https://github.com/CN-UPB/ns-simulation-compiler/releases) or [branch](https://github.com/CN-UPB/ns-simulation-compiler/tree/im2019). The master branch may have evolved from the originally submitted code.*
+
 ## Installation requirements
 
 * [Pyhton 3.6](https://www.python.org/) for the automatic compilation and generation of OMNeT++ simulation code
